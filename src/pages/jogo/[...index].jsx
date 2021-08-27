@@ -9,6 +9,21 @@ import { useEffect } from 'react'
 export default function jogo() {
   const router = useRouter()
   const [portas, setPortas] = useState([])
+  const [valido, setValido] = useState(false)
+
+
+  
+  useEffect(() => {
+    let [qtdePortas, portaComPresente] = router.query?.index
+    qtdePortas = parseInt(qtdePortas)
+    portaComPresente = parseInt(portaComPresente)
+
+    const qtdePortasValidas = qtdePortas >= 3 && qtdePortas <= 40
+    const qtdePresenteValidas = portaComPresente >= 1 && portaComPresente <= qtdePortas
+
+    setValido(qtdePortasValidas && qtdePresenteValidas)
+
+  }, [portas]) // quando isso modificar
 
   useEffect(() => {
     if(router.query.index !== undefined) {
@@ -18,6 +33,7 @@ export default function jogo() {
       setPortas(criarPortas(qtdePortas, portaComPresente))
     }
   }, [router?.query]) // quando isso modificar
+
 
   function renderPortas() {
     return portas.map(porta => {
@@ -29,11 +45,13 @@ export default function jogo() {
   return ( 
     <div className={styles.jogo}>
       <div className={styles.portas}>
-        {renderPortas()}
+        {valido ?
+          renderPortas() : 
+          <h2>Valores inválido</h2>}
       </div>
 
       <div className={styles.botoes}>
-        <Link href="/">
+        <Link href="/form">
           <button>Reiniciar</button>
         </Link>
       </div>
