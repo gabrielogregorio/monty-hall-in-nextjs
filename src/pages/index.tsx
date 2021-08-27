@@ -10,17 +10,14 @@ export default function Formulary() {
   
 
   return ( 
-    <div className={styles.form}>
-      <div>
+    <div  className={styles.base}>
+      <div className={styles.form}>
         <Card bgcolor="#c0392c">
-          <h1>Monty Hall</h1>
+          <h1 className={styles.title}>Monty Hall</h1>
          </Card>
         <Card>
           <Input text="Qtde Portas" value={qtdePortas} onChange={novaQtde => {setQtdePortas(novaQtde)}}  />
         </Card>
-      </div>
-
-      <div>
         <Card>
           <Input text="Com presente" value={comPresente} onChange={novaComPresente => {setComPresente(novaComPresente)}}  />
         </Card>
@@ -31,5 +28,6 @@ export default function Formulary() {
         </Card>
       </div>
     </div>
+
   )
 }

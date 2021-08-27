@@ -7,7 +7,7 @@ interface CardProps {
 
 export default function Card(props: CardProps) {
   return (
-    <div className={styles.card} style={{backgroundColor: props.bgcolor ?? "#fff"}}>
+    <div style={{backgroundColor: props.bgcolor ?? "#fff"}} className={styles.card} >
       {props.children}
     </div>
   )

@@ -3,8 +3,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: var(--area-porta-largura);
-  height: var(--area-porta-altura);
+  width: 200px;
+  height: 310px;
   margin: 5px;
 }
  
@@ -35,7 +35,7 @@
 .macaneta {
   position: absolute;
   align-self: flex-start;
-  bottom: calc(0.45 * var(--area-porta-altura));
+  bottom: calc(0.45 * 310px);
   height: 20px;
   width: 20px;
   border-radius: 50%;
@@ -61,4 +61,16 @@
 
 .selecionada .macaneta {
   background-color: yellow;
+}
+
+
+@media screen and (max-width: 600px) {
+  .area {
+    width: 100px;
+    height: 250px;
+  }
+  
+  .macaneta {
+    bottom: calc(0.45 * 250px);
+  }
 }

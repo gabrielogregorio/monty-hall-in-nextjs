@@ -1,13 +1,15 @@
-.form {
+.base {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
-  height: 100vh;
+  justify-content: center;
+  min-height: 100vh;
+  height: 100%;
 }
-
-.form > div {
-  display: flex;
+.form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  padding: 0 2%;
 }
 
 .link {
@@ -17,4 +19,11 @@
   flex: 1;
   margin: 0;
   cursor: pointer;
+}
+
+
+@media screen and (max-width: 600px) {
+  .form {
+    width: 100%;
+  }
 }
