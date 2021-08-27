@@ -1,4 +1,4 @@
-.jogo {
+.game {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -6,18 +6,18 @@
   height: 100vh;
 }
 
-.portas {
+.doors {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
 }
 
-.botoes {
+.buttons {
   margin-top: 40px;
 }
 
-.botoes button{
+.buttons button{
   background-color: #c0392c;
   color: white;
   font-size: 2rem;

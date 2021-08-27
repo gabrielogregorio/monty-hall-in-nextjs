@@ -10,16 +10,17 @@ export default function jogo() {
   const router = useRouter()
   const [portas, setPortas] = useState([])
   const [valido, setValido] = useState(false)
-
-
   
   useEffect(() => {
     let [qtdePortas, portaComPresente] = router.query?.index
     qtdePortas = parseInt(qtdePortas)
     portaComPresente = parseInt(portaComPresente)
 
-    const qtdePortasValidas = qtdePortas >= 3 && qtdePortas <= 40
-    const qtdePresenteValidas = portaComPresente >= 1 && portaComPresente <= qtdePortas
+    // Quantidade de portas
+    let qtdePortasValidas = qtdePortas >= 3 && qtdePortas <= 40
+
+    // Porta com presente é válida
+    let qtdePresenteValidas = portaComPresente >= 1 && portaComPresente <= qtdePortas
 
     setValido(qtdePortasValidas && qtdePresenteValidas)
 
@@ -43,15 +44,15 @@ export default function jogo() {
 
 
   return ( 
-    <div className={styles.jogo}>
-      <div className={styles.portas}>
+    <div className={styles.game}>
+      <div className={styles.doors}>
         {valido ?
           renderPortas() : 
           <h2>Valores inválido</h2>}
       </div>
 
-      <div className={styles.botoes}>
-        <Link href="/form">
+      <div className={styles.buttons}>
+        <Link href="/">
           <button>Reiniciar</button>
         </Link>
       </div>

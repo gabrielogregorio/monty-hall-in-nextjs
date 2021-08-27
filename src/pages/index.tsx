@@ -1,7 +1,7 @@
-import Card from '../../components/Form/Card'
+import Card from '../components/Form/Card'
 import styles from './Form.module.css'
 import Link from 'next/link'
-import Input from '../../components/Form/Input'
+import Input from '../components/Form/Input'
 import { useState } from 'react'
 
 export default function Formulary() {
