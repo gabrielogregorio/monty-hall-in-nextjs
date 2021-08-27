@@ -15,6 +15,7 @@
   border-top: 5px solid brown;
   border-right: 5px solid brown;
   width: 90%;
+  background-color: #0005;
 }
 
 .porta {
@@ -51,4 +52,12 @@
   border-top: 5px solid yellow;
   border-right: 5px solid yellow;
   width: 90%;
+}
+
+.selecionada .numero {
+  color: yellow;
+}
+
+.selecionada .macaneta {
+  background-color: yellow;
 }
