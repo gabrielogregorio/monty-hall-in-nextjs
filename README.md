@@ -20,5 +20,5 @@
 ## Motivo
 Projeto desenvido em Nextjs no curso de Nextjs e ReactJs da Cod3r.
 
-O deploy foi deito em Vercel e pode ser conferido [aqui](https://montyhall-rho.vercel.app/).
+O deploy foi deito na Vercel e pode ser conferido [aqui](https://montyhall-rho.vercel.app/).
 
